@@ -11,7 +11,7 @@ class Configuration(metaclass=PoolMeta):
 
     allow_sale_to_invoice = fields.MultiValue(
         fields.Boolean("Allow Sale to Invoice"))
-    allow_sale_to_purchase = fields.MultiValue(
+    allow_purchase_to_invoice = fields.MultiValue(
         fields.Boolean("Allow Purchase to Invoice"))
 
     @classmethod
@@ -27,4 +27,4 @@ class ConfigurationSalePurchaseToInvoice(ModelSQL, CompanyValueMixin):
     __name__ = 'account.configuration.sale_purchase_to_invoice'
 
     allow_sale_to_invoice = fields.Boolean("Allow Sale to Invoice")
-    allow_sale_to_purchase = fields.Boolean("Allow Purchase to Invoice")
+    allow_purchase_to_invoice = fields.Boolean("Allow Purchase to Invoice")

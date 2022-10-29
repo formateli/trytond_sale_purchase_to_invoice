@@ -10,8 +10,14 @@ class Sale(metaclass=PoolMeta):
     @classmethod
     def process(cls, sales):
         super(Sale, cls).process(sales)
-        Invoice = Pool().get('account.invoice')
-        Shipment = Pool().get('stock.shipment.out')
+        pool = Pool()
+        Config = pool.get('account.configuration')
+        Invoice = pool.get('account.invoice')
+        Shipment = pool.get('stock.shipment.out')
+
+        config = Config(1)
+        if not config.allow_sale_to_invoice:
+            return
 
         invoices = []
         shipments = []

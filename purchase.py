@@ -10,8 +10,14 @@ class Purchase(metaclass=PoolMeta):
     @classmethod
     def process(cls, purchases):
         super(Purchase, cls).process(purchases)
-        Invoice = Pool().get('account.invoice')
-        Move = Pool().get('stock.move')
+        pool = Pool()
+        Config = pool.get('account.configuration')
+        Invoice = pool.get('account.invoice')
+        Move = pool.get('stock.move')
+
+        config = Config(1)
+        if not config.allow_purchase_to_invoice:
+            return
 
         invoices = []
         moves = []
