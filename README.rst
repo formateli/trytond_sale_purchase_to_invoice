@@ -1,7 +1,7 @@
 Sale / Purchase to Invoice
 ##########################
 
-Automatically post Customer/Pruchase invoice and make stock shipment/moves when the Sale/Purchse is processed.
+Automatically post Customer/Purchase invoice and make stock shipment/moves when the Sale/Purchse is processed.
 
 Installing
 ----------
