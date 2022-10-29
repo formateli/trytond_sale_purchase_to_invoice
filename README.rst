@@ -17,7 +17,7 @@ For Tryton framework:
 
 For this module
 
-    * https://github.com/formateli/cash_bank
+    * https://github.com/formateli/trytond_sale_purchase_to_invoice
 
 License
 -------
