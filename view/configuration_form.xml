@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- This file is part of Sale/Purchase to Invoice module.  
+The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<data>
+    <xpath expr="//field[@name='default_customer_payment_term']" position="after">
+        <newline/>
+        <separator id="sale_purchase" string="Sale / Purchase to Invoice" colspan="4"/>
+        <label name="allow_sale_to_invoice"/>
+	<field name="allow_sale_to_invoice"/>
+        <label name="allow_purchase_to_invoice"/>
+        <field name="allow_purchase_to_invoice"/>
+        <newline/>
+    </xpath>
+</data>
